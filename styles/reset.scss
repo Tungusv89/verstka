@@ -1,0 +1,25 @@
+// reset
+body {
+	padding: 0;
+	margin: 0;
+	border: none;
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	button {
+		border: none;
+	}
+
+	input,
+	button {
+		outline: none;
+	}
+}

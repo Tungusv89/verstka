@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 55px 0;
+}
+header .logo {
+  display: none;
+}
+@media (min-width: 768px) {
+  header .logo {
+    display: block;
+  }
+  header .logo img {
+    min-width: 150px;
+  }
+}
+header nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  header nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 42px 0 20px;
+  }
+}
+header nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 2.4vw;
+}
+@media (min-width: 768px) {
+  header nav ul {
+    height: 29px;
+  }
+}
+header nav ul li {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header nav ul a {
+  color: white;
+  position: relative;
+  white-space: nowrap;
+}
+header nav ul a::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  background-color: white;
+  transition: width 0.4s ease-in-out;
+}
+header nav ul a:hover::before {
+  width: 100%;
+}
+header .call {
+  display: none;
+  position: relative;
+  padding-left: 2.1875em;
+  color: white;
+  height: 29px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  header .call {
+    display: block;
+  }
+}
+header .call::before {
+  position: absolute;
+  content: "";
+  background: url("../img/call.svg") no-repeat center center;
+  background-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  left: 0;
+  top: 0;
+}

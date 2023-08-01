@@ -1,0 +1,91 @@
+// header
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	padding: 55px 0;
+
+	.logo {
+		display: none;
+
+		@media (min-width: 768px) {
+			display: block;
+
+			img {
+				min-width: 150px;
+			}
+		}
+	}
+
+	nav {
+		display: none;
+
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: center;
+			margin: 0 42px 0 20px;
+		}
+
+		ul {
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+			// gap: 46px;
+			gap: 2.4vw;
+
+			@media (min-width: 768px) {
+				height: 29px;
+			}
+
+			li {
+				width: fit-content;
+			}
+
+			a {
+				color: white;
+				position: relative;
+				white-space: nowrap;
+
+				&::before {
+					position: absolute;
+					content: "";
+					height: 1px;
+					width: 0;
+					bottom: 0;
+					background-color: white;
+					transition: width 0.4s ease-in-out;
+				}
+
+				&:hover {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.call {
+		display: none;
+		position: relative;
+		padding-left: 2.1875em;
+		color: white;
+		height: 29px;
+		white-space: nowrap;
+
+		@media (min-width: 768px) {
+			display: block;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			background: url("../img/call.svg") no-repeat center center;
+			background-size: 1.5em;
+			width: 1.5em;
+			height: 1.5em;
+			left: 0;
+			top: 0;
+		}
+	}
+}

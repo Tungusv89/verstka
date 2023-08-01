@@ -1,0 +1,77 @@
+.first_screen {
+	background: url("../img/main-bg.jpg");
+	background-size: cover;
+	color: white;
+	padding-bottom: 40px;
+
+	@media (min-width: 768px) {
+		padding-bottom: 13.8%;
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+		font-weight: 500;
+		letter-spacing: 1.44px;
+		margin-top: 7.8%;
+
+		@media (min-width: 768px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	.title {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1.375;
+		margin-top: 0.34em;
+
+		@media (min-width: 768px) {
+			font-size: 4rem;
+		}
+	}
+
+	.actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 2.5em;
+
+		button {
+			font-family: "Poppins", sans-serif;
+			font-size: 0.8rem;
+			background-color: #3a4574;
+			padding: 2em 3.61em;
+			color: white;
+			transition: background 0.4s ease-in;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #5b6593;
+			}
+
+			@media (min-width: 768px) {
+				font-size: 1.125rem;
+			}
+		}
+
+		.social_links {
+			display: none;
+			gap: 25px;
+
+			@media (min-width: 768px) {
+				display: flex;
+			}
+
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid white;
+				border-radius: 50%;
+				width: 46px;
+				height: 46px;
+				color: white;
+			}
+		}
+	}
+}

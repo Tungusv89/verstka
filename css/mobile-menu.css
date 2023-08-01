@@ -1,0 +1,119 @@
+.header-menu__icon,
+.header-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header-menu__icon {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .header-menu__icon span {
+    top: 14px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #d3b47f;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+  .header-menu__icon span:first-child {
+    top: 0px;
+  }
+  .header-menu__icon span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+  .header-menu__icon.active {
+    position: fixed;
+  }
+  .header-menu__icon.active span {
+    transform: scale(0);
+  }
+  .header-menu__icon.active span:first-child {
+    transform: rotate(-45deg);
+    top: 14px;
+  }
+  .header-menu__icon.active span:last-child {
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    left: -120%;
+    top: 0;
+    background-color: #fff;
+    padding: 95px 0;
+    animation-timing-function: ease;
+    animation-duration: 0.6s;
+    animation-delay: 0s;
+  }
+  .header-menu.active {
+    left: 0;
+    z-index: 2;
+  }
+  .header-menu.active nav,
+  .header-menu.active .call {
+    display: block;
+    color: #000;
+  }
+  .header-menu.active nav a,
+  .header-menu.active .call a {
+    color: #000;
+  }
+  .header-menu.active nav {
+    display: flex;
+    flex: 0;
+  }
+  .header-menu.active nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+  }
+  .header-menu.active nav ul li {
+    width: 90%;
+    border-bottom: 1px solid #5c5c5c;
+    padding-bottom: 16px;
+  }
+  .header-menu.active nav ul a {
+    font-size: 1.8rem;
+    padding-left: 42px;
+  }
+  .header-menu.active .call {
+    font-size: 1.9rem;
+    margin: 0 auto;
+    padding-left: 2.1875em;
+  }
+  .header-menu.active .social_links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  .header-menu.active .social_links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    color: #000;
+    font-size: 1.5rem;
+  }
+}
