@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   modal.addEventListener('click', (e) => {
-    if (e.target === modal && e.target === document.querySelector('.close')) {
+    if (e.target === modal) {
       modal.style.display = '';
     }
   });
