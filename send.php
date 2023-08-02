@@ -1,16 +1,25 @@
-<?
-if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' && !empty($_POST['name'])) {
-    $message = 'Имя: ' . $_POST['name'] . ' ';
-    $message .= 'Email: ' . $_POST['email'] . ' ';
+<?php
+$name = $_POST['name'];
+$email = $_POST['email'];
 
-    $mailTo = $_POST['email']; // Ваш e-mail
-    $subject = "Письмо с сайта"; // Тема сообщения
-    $headers= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/html; charset=utf-8\r\n";
-    $headers .= "From: info@site.ru <info@site.ru>\r\n";
-    if(mail($mailTo, $subject, $message, $headers)) {
-        echo "Спасибо, ".$_POST['name'].", мы свяжемся с вами в самое ближайшее время!";
-    } else {
-        echo "Сообщение не отправлено!";
-    }
+$name = htmlspecialchars($name);
+$email = htmlspecialchars($email);
+
+$name = urldecode($name);
+$email = urldecode($email);
+
+$name = trim($name);
+$email = trim($email);
+
+echo $name;
+echo '<br>';
+echo $email;
+
+mail($email, "Заявка с сайта", "Имя".$name.". E-mail: ".$email.". Сообщение: Тестовое письмо","From: example2@mail.ru \r\n");
+
+if (mail($email, "Заявка с сайта", "Имя".$name.". E-mail: ".$email.". Сообщение: Тестовое письмо " ,"From: example2@mail.ru \r\n"))
+ {
+    echo "  \r\nСообщение успешно отправлено";
+} else {
+    echo "при отправке сообщения возникли ошибки";
 }
