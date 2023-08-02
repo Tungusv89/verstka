@@ -11,14 +11,9 @@ $email = urldecode($email);
 $name = trim($name);
 $email = trim($email);
 
-echo $name;
-echo '<br>';
-echo $email;
+mail("tungusv89@gmail.com, " . $email . "" . $email . "", "Заявка с сайта", "Тестовое письмо\r\n");
 
-mail($email, "Заявка с сайта", "Имя".$name.". E-mail: ".$email.". Сообщение: Тестовое письмо","From: example2@mail.ru \r\n");
-
-if (mail($email, "Заявка с сайта", "Имя".$name.". E-mail: ".$email.". Сообщение: Тестовое письмо " ,"From: example2@mail.ru \r\n"))
- {
+if (mail("tungusv89@gmail.com," . $email . "", "Заявка с сайта", "Тестовое письмо\r\n")) {
     echo "  \r\nСообщение успешно отправлено";
 } else {
     echo "при отправке сообщения возникли ошибки";

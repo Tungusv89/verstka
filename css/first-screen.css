@@ -1,43 +1,43 @@
-.first_screen {
+.first-screen {
   background: url("../img/main-bg.jpg");
   background-size: cover;
   color: white;
   padding-bottom: 40px;
 }
 @media (min-width: 768px) {
-  .first_screen {
+  .first-screen {
     padding-bottom: 13.8%;
   }
 }
-.first_screen .subtitle {
+.first-screen .subtitle {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1.44px;
   margin-top: 7.8%;
 }
 @media (min-width: 768px) {
-  .first_screen .subtitle {
+  .first-screen .subtitle {
     font-size: 1.5rem;
   }
 }
-.first_screen .title {
+.first-screen .title {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.375;
   margin-top: 0.34em;
 }
 @media (min-width: 768px) {
-  .first_screen .title {
+  .first-screen .title {
     font-size: 4rem;
   }
 }
-.first_screen .actions {
+.first-screen .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 2.5em;
 }
-.first_screen .actions button {
+.first-screen .actions button {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   background-color: #3a4574;
@@ -46,24 +46,24 @@
   transition: background 0.4s ease-in;
   cursor: pointer;
 }
-.first_screen .actions button:hover {
+.first-screen .actions button:hover {
   background-color: #5b6593;
 }
 @media (min-width: 768px) {
-  .first_screen .actions button {
+  .first-screen .actions button {
     font-size: 1.125rem;
   }
 }
-.first_screen .actions .social_links {
+.first-screen .actions .social_links {
   display: none;
   gap: 25px;
 }
 @media (min-width: 768px) {
-  .first_screen .actions .social_links {
+  .first-screen .actions .social_links {
     display: flex;
   }
 }
-.first_screen .actions .social_links a {
+.first-screen .actions .social_links a {
   display: flex;
   justify-content: center;
   align-items: center;

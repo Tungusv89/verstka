@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // modal
   const modal = document.querySelector('.modal');
 
-  document.querySelector('.first_screen button').addEventListener('click', () => {
+  document.querySelector('.first-screen button').addEventListener('click', () => {
     const state = modal.style.display == '' ? 'flex' : 'none';
     modal.style.display = state;
   });
@@ -13,8 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  document.querySelector('.close').addEventListener('click', () => {
+    modal.style.display = '';
+  });
+
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
+    if (e.target === modal && e.target === document.querySelector('.close')) {
       modal.style.display = '';
     }
   });
@@ -76,11 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
         data: formNm.serialize(),
         beforeSend: function () {
           // Вывод текста в процессе отправки
-          $(formNm).html('<p style="text-align:center">Отправка...</p>');
+          $(formNm).html('<div style="text-align:center">Отправка...</div>');
         },
         success: function (data) {
           // Вывод текста результата отправки
-          $(formNm).html('<p style="text-align:center">' + data + '</p>');
+          $(formNm).html('<div style="text-align:center">' + data + '</div>');
         },
         error: function (_jqXHR, _text, error) {
           // Вывод текста ошибки отправки
